@@ -1,0 +1,5 @@
+.idea
+genji-vitpress/.idea
+genji-vitpress/.vitepress/cache
+genji-vitpress/.vitepress/dist
+genji-vitpress/node_modules/
