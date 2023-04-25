@@ -2,8 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  outDir: '../genji-doc',
-  base: '/genji-doc/',
+  outDir: '../docs',
   title: "pixi-graph-genji",
   description: "A pixi.js based on the realization of the relationship graph library",
   themeConfig: {
