@@ -6,7 +6,7 @@ hero:
   name: "pixi-graph-genji"
   text: 一个以pixi.js基础实现的graph库
   image:
-    src: /logo.png
+    src: ../imgs/logo.png
     alt: VitePress
   actions:
     - theme: brand
