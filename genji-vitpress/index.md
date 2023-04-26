@@ -13,9 +13,8 @@ hero:
       text: 开始阅读
       link: /guide/start
     - theme: alt
-      text: Github
-      icon: github
-      link: https://github.com/724493602/pixi-graph-genji
+      text: 在线例子
+      link: /guide/example
 
 features:
   - title: pixi.js
@@ -25,8 +24,6 @@ features:
   - title: mode
     details: 可以切换不同的模式和行为
 ---
-
-
 <style>
     :root {
   --vp-home-hero-name-color: transparent;

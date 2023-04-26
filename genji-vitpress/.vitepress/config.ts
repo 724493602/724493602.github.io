@@ -22,7 +22,9 @@ export default defineConfig({
             { text: '快速上手', link: '/guide/start' },
             { text: '模式和行为', link: '/guide/mode' },
             { text: '事件监听', link: '/guide/events' },
-            { text: '样式', link: '/guide/style' },
+            { text: '定制样式', link: '/guide/style' },
+            { text: '在线例子', link: '/guide/example' },
+            // { text: '大数据量', link: '/guide/big-data' },
           ]
         }
       ],

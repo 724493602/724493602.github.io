@@ -20,7 +20,7 @@
     container: 'container',
      modes: {
          default: ['drag-canvas', 'zoom-canvas'],
-         edit: ['drag-node', 'draw-link','drag-canvas', 'zoom-canvas']
+         edit: ['drag-node', 'create-edge','drag-canvas', 'zoom-canvas']
      }
  });
 ```

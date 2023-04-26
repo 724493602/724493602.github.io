@@ -1,17 +1,23 @@
 {
-  "hash": "ef442fb8",
-  "browserHash": "5ac7c451",
+  "hash": "cd26f511",
+  "browserHash": "64c22368",
   "optimized": {
     "vue": {
       "src": "../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "5b42eaea",
+      "fileHash": "beae735b",
       "needsInterop": false
     },
     "@theme/index": {
       "src": "../../../node_modules/vitepress/dist/client/theme-default/index.js",
       "file": "@theme_index.js",
-      "fileHash": "c74ea9c6",
+      "fileHash": "0c7a3ff6",
+      "needsInterop": false
+    },
+    "pixi-graph-genji": {
+      "src": "../../../node_modules/pixi-graph-genji/dist/pixi-graph-genji.es.js",
+      "file": "pixi-graph-genji.js",
+      "fileHash": "c0656e9a",
       "needsInterop": false
     }
   },

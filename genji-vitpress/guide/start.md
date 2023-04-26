@@ -30,6 +30,7 @@ const data = {
   nodes: [
     {
       id: 'node1', // String，该节点存在则必须，节点的唯一标识
+      name: 'node1'  //名称
     },
     {
       id: 'node2', 
@@ -41,6 +42,7 @@ const data = {
     {
       source: 'node1',
       target: 'node2',
+      name: 'link1'  //名称
     },
   ],
 };
