@@ -2,28 +2,33 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base:'/docs/',
   outDir: '../docs',
   title: "pixi-graph-genji",
   description: "A pixi.js based on the realization of the relationship graph library",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: '/logo.png',
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: '概览', link: '/guide/start' },
+      // { text: 'API', link: '/api' }
     ],
 
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
-
+    sidebar: {
+      '/guide/': [
+        {
+          text: '开始',
+          items: [
+            { text: '快速上手', link: '/guide/start' },
+            { text: '模式和行为', link: '/guide/mode' },
+            { text: '事件监听', link: '/guide/events' },
+            { text: '样式', link: '/guide/style' },
+          ]
+        }
+      ],
+    },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/724493602/pixi-graph-genji' }
     ]
   }
 })

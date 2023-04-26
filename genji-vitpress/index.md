@@ -6,21 +6,22 @@ hero:
   name: "pixi-graph-genji"
   text: 一个以pixi.js基础实现的graph库
   image:
-    src: ../imgs/logo.png
-    alt: VitePress
+    src: https://724493602.github.io/imgs/logo.png
+    alt: logo
   actions:
     - theme: brand
       text: 开始阅读
-      link: /markdown-examples
+      link: /guide/start
     - theme: alt
-      text: github
+      text: Github
+      icon: github
       link: https://github.com/724493602/pixi-graph-genji
 
 features:
   - title: pixi.js
     details: 基于pixi.js,webgl渲染，速度快
   - title: layout
-    details: 包含不同的布局方式
+    details: 包含不同的布局方式,默认布局为d3 force
   - title: mode
     details: 可以切换不同的模式和行为
 ---

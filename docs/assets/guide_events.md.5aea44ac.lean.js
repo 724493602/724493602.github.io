@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as a,O as s}from"./chunks/framework.5d9d2abb.js";const m=JSON.parse('{"title":"事件监听","description":"","frontmatter":{},"headers":[],"relativePath":"guide/events.md"}'),d={name:"guide/events.md"},n=s("",6),o=[n];function r(l,c,p,i,u,_){return a(),e("div",null,o)}const v=t(d,[["render",r]]);export{m as __pageData,v as default};
