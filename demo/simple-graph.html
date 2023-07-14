@@ -17,6 +17,7 @@
     <button id="btn" >fitview</button>
     <button id="zoomIn">zoomIn</button>
     <button id="zoomOut">zoomOut</button>
+    <button id="mode">模式切换 <span id="text">编辑</span></button>
   </div>
 
     <div style="width: 100vw; height: 100vh">
@@ -25,17 +26,10 @@
     <script type="module">
       import json  from "./json.js";
       import { Graph } from './pixi-graph-genji.es.js';
+      let mode = 'default'
       const config = {
         container: 'graph',
         // fps: true,
-        // plugins: [new Contextmenu({
-        //   offset: {x: 1, y: 2},
-        //   menu: [{id:1, name: '菜单1'},{id:2, name: '菜单2'}],
-        //   handleMenuClick(target, item) {
-        //     console.log(target)
-        //     console.log(item)
-        //   }
-        // })],
         modes: {
           default: ['drag-node', 'drag-canvas', 'zoom-canvas', 'create-edge'],
           edit: ['drag-node', 'draw-link']
@@ -72,63 +66,6 @@
         graph.changeData({ nodes: data.classes, links: data.edges.map(n => ({...n,  source: n.fromClass, target: n.toClass})) });
       });
 
-      setTimeout(() => {
-      //   graph.updateLayout( {
-      //     type: 'force',
-      //     xForce:{
-      //       enabled:true,
-      //       xFn:(d) =>{
-      //         return d.hasOwnProperty('level') ? -200 : -(3 -1)*200 +200
-      //       },
-      //       strengthFn: (d) => {
-      //         return d.level ? 0 : .05
-      //       },
-      //     },
-      //     yForce:{
-      //       enabled:true,
-      //       strengthFn: (d) => {
-      //         return d.hasOwnProperty('level') ? 0 : .05
-      //       },
-      //       yFn: (d) => {
-      //         return d.hasOwnProperty('level') ? 0 : (3 -1)*200 +200
-      //       }
-      //     },
-      //     link:{
-      //       strengthFn: (d) => {
-      //         return d.source.hasOwnProperty('level') || d.target
-      //                 .hasOwnProperty('level') ? 0 : 0.8
-      //       }
-      //     },
-      //     charge: {
-      //       enabled: true,
-      //       strengthFn: (d) => {
-      //         return d.hasOwnProperty('level') ? -10 : -400
-      //       },
-      //       theta: 1
-      //     },
-      //     radialForce: {
-      //       border: true,
-      //       x: 0,
-      //       y:0,
-      //       enabled: true,
-      //       rFn: (d) => {
-      //         if(d.hasOwnProperty('level')){
-      //           return (d.level - 1) * 200
-      //         } else {
-      //           return 0
-      //         }
-      //       },
-      //       strengthFn: (d) => {
-      //         if(d.hasOwnProperty('level')) {
-      //           return 1
-      //         } else {
-      //           return 0
-      //         }
-      //       }
-      //     },
-      //   });
-      //   graph.setMode('edit')
-      }, 3000);
 
       let btn = document.querySelector('button')
       btn.addEventListener('click', (e) =>{
@@ -141,6 +78,14 @@
       let zoomOut = document.querySelector('#zoomOut')
       zoomOut.addEventListener('click', (e) =>{
         graph.zoomOut()
+      })
+
+      let modeBtn = document.querySelector('#mode')
+      let text = document.querySelector('#text')
+      modeBtn.addEventListener('click', (e) =>{
+        mode = mode === 'default' ? 'edit' : 'default'
+        text.innerText =  mode === 'default' ? '编辑' : '只读'
+        graph.setMode(mode)
       })
     </script>
   </body>
