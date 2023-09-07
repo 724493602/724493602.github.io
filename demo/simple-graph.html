@@ -13,7 +13,7 @@
   </style>
   <body>
 
-  <div style="position: absolute;left: 0;top: 0">
+  <div style="position: absolute;left: 0;top: 30px">
     <button id="btn" >fitview</button>
     <button id="zoomIn">zoomIn</button>
     <button id="zoomOut">zoomOut</button>
@@ -29,7 +29,7 @@
       let mode = 'default'
       const config = {
         container: 'graph',
-        // fps: true,
+        fps: true,
         modes: {
           default: ['drag-node', 'drag-canvas', 'zoom-canvas', 'create-edge'],
           edit: ['drag-node', 'draw-link']
@@ -58,7 +58,7 @@
       });
       graph.on('createEdge:end', ({ startNode, endNode }) => {
         data.edges.push({
-          id: `${startNode.id}-${endNode.id}`,
+          id: `${startNode.id}-${endNode.id}-${new Date().getTime()}`,
           name: `${startNode.name}-${endNode.name}`,
           fromClass: startNode.id,
           toClass: endNode.id
